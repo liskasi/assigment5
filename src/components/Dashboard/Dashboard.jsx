@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAirVisual } from "../../api/airvisual";
-import WeatherData from "../WeatherData/WeatherData";
+import OpenWeatherMap from "../OpenWeatherMap/OpenWeatherMap";
 
 function Dashboard() {
     const [airVisualData, setAirVisualData] = useState(null);
@@ -14,7 +14,7 @@ function Dashboard() {
     }, []);
 
   return <div>
-    <WeatherData />
+    <OpenWeatherMap />
   </div>;
 }
 

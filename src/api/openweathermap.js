@@ -1,5 +1,7 @@
 let apiKey = "531af2461f50b8bd82618834fb7e0015";
 let city = "riga";
+const lat = 57;
+const lon = 24.0833;
 // let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 let url = "";
 
@@ -16,7 +18,7 @@ export async function getWeather() {
 }
 
 export async function getAirPollution() {
-    url = `http://api.openweathermap.org/data/2.5/air_pollution?q=${city}&appid=${apiKey}`;
+    url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     return await fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -27,8 +29,8 @@ export async function getAirPollution() {
       });
 }
 
-export async function getHourlyForecast() {
-    url = `http://api.openweathermap.org/data/2.5/forecast/hourly?q=${city}&appid=${apiKey}`;
+export async function getForecast() {
+    url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     return await fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -39,17 +41,17 @@ export async function getHourlyForecast() {
       });
 }
 
-export async function getDailyForecast() {
-    url = `http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&appid=${apiKey}`;
-    return await fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        return Promise.resolve(data);
-      })
-      .catch((error) => {
-        console.log("Error: ", error);
-      });
-}
+// export async function getDailyForecast() {
+//     url = `http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&appid=${apiKey}`;
+//     return await fetch(url)
+//       .then((response) => response.json())
+//       .then((data) => {
+//         return Promise.resolve(data);
+//       })
+//       .catch((error) => {
+//         console.log("Error: ", error);
+//       });
+// }
 
 // {
 //     "coord": {
