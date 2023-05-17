@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getOpenWeatherMap } from "../../api/openweathermap";
+import { getWeather } from "../../api/openweathermap";
 
 function WeatherData() {
     const [openWeatherMapData, setOpenWeatherMapData] = useState(null);
 
     useEffect(() => {
-        getOpenWeatherMap().then(
+        getWeather().then(
             (data) => {
                 setOpenWeatherMapData(data);
             }
