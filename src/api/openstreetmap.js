@@ -29,7 +29,6 @@ fetch(endpoint, {
   .then((response) => response.json())
   .then((data) => {
     // Process the data received from the API
-    console.log(data);
   })
   .catch((error) => {
     // Handle any errors that occur during the API request
