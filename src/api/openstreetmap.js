@@ -31,6 +31,7 @@ return fetch(endpoint, {
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
+    return(data)
     // Process the data received from the API
   })
   .catch((error) => {
