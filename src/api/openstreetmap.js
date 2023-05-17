@@ -21,16 +21,20 @@ area[name="Rīga"]->.searchArea;
 out center;
 `;
 
+export async function getLocations() {
+
 // Make the API request
-fetch(endpoint, {
+return fetch(endpoint, {
   method: "POST",
   body: query,
 })
   .then((response) => response.json())
   .then((data) => {
+    console.log(data);
     // Process the data received from the API
   })
   .catch((error) => {
     // Handle any errors that occur during the API request
     console.error("Error:", error);
   });
+}
