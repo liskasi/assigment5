@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/assignment5/static/css/main.7f58404c.css",
+    "main.js": "/assignment5/static/js/main.aab43e34.js",
+    "static/js/787.67265a3d.chunk.js": "/assignment5/static/js/787.67265a3d.chunk.js",
+    "static/media/dashboard-bg-blue.jpg": "/assignment5/static/media/dashboard-bg-blue.04bdafa6ccaf8b0f00d8.jpg",
+    "index.html": "/assignment5/index.html",
+    "main.7f58404c.css.map": "/assignment5/static/css/main.7f58404c.css.map",
+    "main.aab43e34.js.map": "/assignment5/static/js/main.aab43e34.js.map",
+    "787.67265a3d.chunk.js.map": "/assignment5/static/js/787.67265a3d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f58404c.css",
+    "static/js/main.aab43e34.js"
+  ]
+}
