@@ -6,11 +6,12 @@ import {
 } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
 import MapView from "./components/MapView/MapView";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      asdasd
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />

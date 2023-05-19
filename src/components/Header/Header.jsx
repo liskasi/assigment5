@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import styles from "./Header.module.css";
 
 function Header() {
-
-  return <div>
-    <div>
-      Dashboard
+  return (
+    <div className={styles.root}>
+      <div className={styles.list}>
+        <a className={styles.link} href="/">
+          Dashboard
+        </a>
+        <a className={styles.link} href="/ecofriendly-locations">
+          Eco-friendly activities
+        </a>
+      </div>
     </div>
-    <div>
-      Eco-friendly activities
-    </div>
-  </div>;
+  );
 }
 
 export default Header;

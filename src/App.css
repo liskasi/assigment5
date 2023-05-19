@@ -2,4 +2,6 @@
 
 .App {
     font-family: 'Assistant', sans-serif;
+    display: flex;
+    flex-direction: column;
 }

@@ -5,13 +5,13 @@ import HourlyForecast from "../Forecast/Forecast";
 
 import styles from "./OpenWeatherMap.module.css";
 
-function OpenWeetherMap() {
+function OpenWeetherMap(props) {
   return (
     <div className={styles.root}>
-      <WeatherData />
+      <WeatherData city={props.city} />
       <div className={styles.row}>
-        <AirPollutionData />
-        <HourlyForecast />
+        <AirPollutionData city={props.city} />
+        <HourlyForecast city={props.city} />
       </div>
     </div>
   );

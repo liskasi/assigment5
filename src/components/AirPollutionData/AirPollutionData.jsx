@@ -33,7 +33,7 @@ function getPollutionObj(data) {
   }, {});
 }
 
-function AirPollutionData() {
+function AirPollutionData(props) {
   const [airPollutionIndex, setAirPollutionIndex] = useState(null);
   const [airPollutants, setAirPollutants] = useState({});
 
@@ -49,13 +49,12 @@ function AirPollutionData() {
       setAirPollutants(Object.values(airPollutants));
       setAirPollutionIndex(aqi);
     });
-  }, []);
+  }, [props.city]);
 
   if (!airPollutionIndex) {
     return null;
   }
 
-  //   console.log(airPollutants);
 
   const getQualityIndex = (index) => {
     switch (index) {
@@ -82,7 +81,7 @@ function AirPollutionData() {
           <th>Pollutant</th>
           <th>Concentration</th>
         </tr>
-        {airPollutants.map(({label, value}, index) => (
+        {airPollutants.length && airPollutants.map(({label, value}, index) => (
           <tr>
             <td>{label}</td>
             <td>{value} μg/m3</td>
