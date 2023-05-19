@@ -10,6 +10,7 @@ import MapView from "./components/MapView/MapView";
 function App() {
   return (
     <div className="App">
+      asdasd
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />

@@ -1,0 +1,99 @@
+.root {
+  background: #f7e8d5;
+  border-radius: 10px;
+  padding: 20px 25px;
+  display: flex;
+  gap: 10px;
+
+  width: 100%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(247, 232, 213, 0.15);
+
+  backdrop-filter: blur(5px);
+}
+
+.celsius {
+  top: 8px;
+  font-size: 36%;
+  position: relative;
+}
+
+.currentTemp {
+  font-weight: lighter;
+  font-size: 90px;
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  padding-top: 10px;
+  text-shadow: 2px 2px 5px #f7e8d5;
+}
+
+.time {
+  font-size: 24px;
+  color: #8e9bac;
+  display: flex;
+  justify-content: center;
+}
+
+.date {
+  font-size: 28px;
+  text-align: center;
+}
+
+.currentInfo {
+  color: #768ea9;
+  width: 190px;
+}
+
+.additionalData {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* .card {
+    width: 140px;
+    border-radius: 5px;
+    background: rgba(247, 232, 213, .5);
+} */
+
+.card_label {
+  color: #768ea9;
+  font-size: 16px;
+}
+
+.card_value {
+  font-size: 50px;
+}
+
+.cards_block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 5px;
+}
+
+.card {
+  background: azure;
+  width: 140px;
+  border-radius: 5px;
+  background: rgba(247, 232, 213, 0.5);
+  padding: 10px;
+}
+
+.cards_pair {
+  display: flex;
+  gap: 2px;
+}
+
+.top_card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1600px) {
+  .additionalData {
+    flex-direction: column;
+  }
+}
