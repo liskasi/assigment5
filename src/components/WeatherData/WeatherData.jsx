@@ -71,20 +71,20 @@ function WeatherData(props) {
           <div className={`${styles.card} ${styles.top_card}`}>
             <div className={styles.card_label}>Feels like</div>
             <div className={styles.card_value}>
-              {getRoundedTemp(weatherData?.main.feels_like)}
+              {getRoundedTemp(weatherData?.main.feels_like)}&#8451;
             </div>
           </div>
           <div className={styles.cards_pair}>
             <div className={styles.card}>
               <div className={styles.card_label}>Minimum Temperature</div>
               <div className={styles.card_value}>
-                {getRoundedTemp(weatherData?.main.temp_min)}
+                {getRoundedTemp(weatherData?.main.temp_min)}&#8451;
               </div>
             </div>
             <div className={styles.card}>
               <div className={styles.card_label}>Maximum Temperature</div>
               <div className={styles.card_value}>
-                {getRoundedTemp(weatherData?.main.temp_max)}
+                {getRoundedTemp(weatherData?.main.temp_max)}&#8451;
               </div>
             </div>
           </div>
@@ -94,13 +94,14 @@ function WeatherData(props) {
           <div className={styles.card}>
             <div className={styles.card_label}>Humidity</div>
             <div className={styles.card_value}>
-              {getRoundedTemp(weatherData?.main.humidity)}
+              {getRoundedTemp(weatherData?.main.humidity)}%
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.card_label}>Wind speed</div>
             <div className={styles.card_value}>
               {getRoundedTemp(weatherData?.wind.speed)}
+              <div className={styles.wind_unit}>meter/sec</div>
             </div>
           </div>
         </div>

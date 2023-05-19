@@ -37,6 +37,7 @@ function Dashboard() {
             value={cityName}
             onChange={handleChange}
             onBlur={handleBlur}
+            onKeyDown={handleBlur}
           />
         </div>
         {isCity && <OpenWeatherMap city={cityName} />}
