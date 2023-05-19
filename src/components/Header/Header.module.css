@@ -1,0 +1,25 @@
+.root {
+  height: 50px;
+  background: #c1d1e1;
+  background: rgba(247, 232, 213, 0.5);
+}
+
+.list {
+  display: flex;
+  margin: 0 300px;
+  gap: 30px;
+  height: 100%;
+  align-items: center;
+}
+
+.link {
+  padding: 0 10px;
+  text-decoration: none;
+  color: #768ea9;
+  color: #53759e;
+  font-size: 16px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

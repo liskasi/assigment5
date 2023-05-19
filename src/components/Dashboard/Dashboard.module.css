@@ -1,0 +1,25 @@
+.root {
+    background-image: url("/public/assets/dashboard-bg-blue.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.content {
+    margin: 0 300px;
+}
+
+.location {
+    display: flex;
+}
+
+.input {
+    height: fit-content;
+    align-self: center;
+    border: none;
+    border-bottom: 1px solid #009879;
+    background: none;
+}
+
+.input:focus {
+    outline: none;
+}
