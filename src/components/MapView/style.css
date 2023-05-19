@@ -1,0 +1,51 @@
+.pin2 {
+    position: relative;
+    top: -36px;
+    left: -12px;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    width: 8px;
+    height: 8px;
+    cursor: help;
+}
+
+.pin2::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    bottom: -30px;
+    left: -6px;
+    border: 10px solid transparent;
+    border-top: 17px solid #ffffff;
+}
+
+.pin2-active {
+    border-color: aqua;
+}
+
+.pin2-active::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 0px;
+    bottom: -30px;
+    left: -6px;
+    border: 10px solid transparent;
+    border-top: 17px solid aqua;
+}
+
+.dropdown {
+    border: 2px dashed red;
+    font-size: 15px;
+    position: absolute;
+    left: -45px;
+    top: 26px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    z-index: 99999;
+}
+
+.dropdown > tr > td {
+    border: 1px dashed red;
+}
