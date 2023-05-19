@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div className={styles.root}>
       <div className={styles.list}>
-        <a className={styles.link} href="/">
+        <Link className={styles.link} to="/">
           Dashboard
-        </a>
-        <a className={styles.link} href="/ecofriendly-locations">
+        </Link>
+        <Link className={styles.link} to="/ecofriendly-locations">
           Eco-friendly activities
-        </a>
+        </Link>
       </div>
     </div>
   );

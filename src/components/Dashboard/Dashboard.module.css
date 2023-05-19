@@ -1,6 +1,6 @@
 .root {
     background-image: url("/public/assets/dashboard-bg-blue.jpg");
-    height: 100vh;
+    height: calc(100vh - 50px);
     background-size: cover;
 }
 
