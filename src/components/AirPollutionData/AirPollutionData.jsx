@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAirPollution } from "../../api/openweathermap";
-import styles from './AirPollutionData.module.css';
+import styles from "./AirPollutionData.module.css";
 
 export const CO = "co";
 export const NO = "no";
@@ -55,7 +55,6 @@ function AirPollutionData(props) {
     return null;
   }
 
-
   const getQualityIndex = (index) => {
     switch (index) {
       case 1:
@@ -77,19 +76,22 @@ function AirPollutionData(props) {
       <h2>Air Pollution</h2>
       <div>Quality index: {getQualityIndex(airPollutionIndex)}</div>
       <table>
-        <tr>
-          <th>Pollutant</th>
-          <th>Concentration</th>
-        </tr>
-        {airPollutants.length && airPollutants.map(({label, value}, index) => (
+        <tbody>
           <tr>
-            <td>{label}</td>
-            <td>{value} μg/m3</td>
-            {/* <div key={index}>
+            <th>Pollutant</th>
+            <th>Concentration</th>
+          </tr>
+          {airPollutants.length &&
+            airPollutants.map(({ label, value }, index) => (
+              <tr key={index}>
+                <td>{label}</td>
+                <td>{value} μg/m3</td>
+                {/* <div key={index}>
               <b>{pollutant.label}</b>: {pollutant.value} μg/m3
             </div> */}
-          </tr>
-        ))}
+              </tr>
+            ))}
+        </tbody>
       </table>
     </div>
   );

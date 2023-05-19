@@ -12,6 +12,12 @@ function Dashboard() {
     setTriggerLocation(true);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleBlur();
+    }
+  };
+
   useEffect(() => {
     if (triggerLocation) {
       getCoordinates(cityName).then((result) => {
@@ -37,7 +43,7 @@ function Dashboard() {
             value={cityName}
             onChange={handleChange}
             onBlur={handleBlur}
-            onKeyDown={handleBlur}
+            onKeyDown={handleKeyDown}
           />
         </div>
         {isCity && <OpenWeatherMap city={cityName} />}
